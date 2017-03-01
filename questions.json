@@ -1,0 +1,24 @@
+{ "questions":
+    [
+        {
+            "Question" : "How do you share data between controllers?",
+            "Answer" : "Create an AngularJS service that will hold the data and inject it inside of the controllers."
+        },
+        {
+            "Question" : "Where should we implement the DOM manipulation in AngularJS?",
+            "Answer" : "In the directives."
+        },
+        {
+            "Question" : "Is it a good or bad practice to use AngularJS together with jQuery?",
+            "Answer" : "It is definitely a bad practice."
+        },
+        {
+            "Question" : "What is an interceptor?",
+            "Answer" : "An interceptor is a middleware code where all the $http requests go through."
+        },
+        {
+            "Question" : "How do you hide an HTML element via a button click in AngularJS?",
+            "Answer" : "You can do this by using the ng-hide directive in conjunction with a controller we can hide an HTML element on button click."
+        }
+    ]
+}

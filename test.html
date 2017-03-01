@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<ul>
+  <li ng-repeat="x in qc.myData">
+    {{ x.Name }} {{ x.Correct }} {{ x.Incorrect }} {{ x.Index }}
+  </li>
+<li ng-repeat="x in myData2">
+    {{ x.Question }} {{ x.Answer }} 
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+  $http.get("students.json").then(function (response) {
+      $scope.myData = response.data.students;
+  });
+  $http.get("questions.json").then(function (response) {
+      $scope.myData2 = response.data.questions;
+  });
+  
+});
+</script>
+
+</body>
+</html>
